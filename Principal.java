@@ -7,6 +7,8 @@ public class Principal {
         boolean fl = false;
         vida = 0;
         Scanner sc = new Scanner(System.in);
+        Regalo regaloGanador = new Regalo();
+
         do {
             vida ++;
             System.out.println("Vida:"+ vida + "\t¿Cual es el número secreto? ");
@@ -15,7 +17,25 @@ public class Principal {
                 fl = true;
         } while (vida < 3 && !fl);
         if (fl == true)
-            System.out.println("Adivinaste!!!!! ");
+        {
+			switch(vida)
+			{
+                case 1:
+					System.out.println(" FELICIDADES adivinaste a la primera!!!!" );
+					System.out.println("Ganaste: "+regaloGanador.elegir(vida) );
+                    break;
+				case 2:
+					System.out.println(" FELICIDADES adivinaste al 2do intento!!!!" );
+					System.out.println("Ganaste: "+regaloGanador.elegir(vida) );
+                    break;
+				case 3:
+					System.out.println(" FELICIDADES adivinaste al 3er intento!!!!" );
+					System.out.println("Ganaste: "+regaloGanador.elegir(vida) );
+					break;
+			}
+			System.out.println("Ganaste un viaje a la luna!!!!! " );
+		}
+
         else {
             System.out.println("ups, perdiste...");
             System.out.println("El número secreto era: 1234");
