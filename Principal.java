@@ -15,7 +15,22 @@ public class Principal {
                 fl = true;
         } while (vida < 3 && !fl);
         if (fl == true)
-            System.out.println("Adivinaste!!!!! ");
+        {
+			switch(vida)
+			{
+                case 1:
+                    System.out.println(" FELICIDADES adivinaste a la primera!!!!" );
+                    break;
+                case 2:
+                    System.out.println(" FELICIDADES adivinaste al 2do intento!!!!" );
+                    break;
+                case 3:
+                    System.out.println(" FELICIDADES adivinaste al 3er intento!!!!" );
+                    break;
+			}
+			System.out.println("Ganaste un viaje a la luna!!!!! " );
+		}
+
         else {
             System.out.println("ups, perdiste...");
             System.out.println("El número secreto era: 1234");
