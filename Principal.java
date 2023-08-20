@@ -16,8 +16,11 @@ public class Principal {
         } while (vida < 3 && !fl);
         if (fl == true)
             System.out.println("Adivinaste!!!!! ");
-        else
+        else {
             System.out.println("ups, perdiste...");
             System.out.println("El número secreto era: 1234");
+        }
+            
+        System.out.println("¡Gracias por jugar!");    
     }
 }
